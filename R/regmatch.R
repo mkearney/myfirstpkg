@@ -23,7 +23,10 @@ re_match <- function(x, pat, perl = NULL, ...) {
     perl <- is_perl(pat)
   }
   m <- regexpr(pat, x, perl = perl, ...)
-  regmatches(x, m)
+  y <- vapply(m, function(.x) .x > 0, FUN.VALUE = logical(1))
+  o <- character(length(x))
+  o[y] <- regmatches(x, m)
+  o
 }
 
 #' @inheritParams re_match
