@@ -1,0 +1,30 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# myfirstpkg
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is a demo package for my blog post on [writing an R package from scratch to CRAN](http://mikewk.com/post/2019-05-01-writing-r-package/).
+
+
+```{r}
+## load package
+library(myfirstpkg)
+
+## use re_match function
+re_match(letters, "[a-d]")
+```
+
